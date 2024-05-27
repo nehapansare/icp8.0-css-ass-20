@@ -1,8 +1,10 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
 }
 
 .sidebar {
@@ -12,6 +14,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    position: fixed;
 }
 
 .sidebar-header {
@@ -24,6 +27,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1;
 }
 
 .menu-item {
@@ -44,6 +48,7 @@ body {
 .menu-item a:hover {
     background-color: #1abc9c;
 }
+
 .submenu {
     list-style: none;
     padding: 0;
@@ -74,6 +79,57 @@ body {
 }
 
 .content {
-
-    padding: 20px;
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 100px;
+    }
+
+    .sidebar-header {
+        display: none;
+    }
+
+    .menu-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .submenu-item {
+        text-align: left;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-item a {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item a i {
+        margin: 0 0 5px 0;
+    }
+}
+
