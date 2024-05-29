@@ -9,7 +9,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #2c3e50;
+    background-color: #4a63ac;
     color: #ecf0f1;
     height: 100vh;
     display: flex;
@@ -85,7 +85,7 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .sidebar {
         width: 200px;
     }
@@ -95,11 +95,12 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 800px) {
     .sidebar {
         position: absolute;
         width: 100%;
         height: auto;
+        margin-top: 500px;
     }
 
     .content {
@@ -133,3 +134,9 @@ body {
     }
 }
 
+@media screen and (max-width: 500px) {
+    body{
+      background-color: gray;
+      
+    }
+  }
