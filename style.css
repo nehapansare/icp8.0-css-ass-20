@@ -1,142 +1,84 @@
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            background: #444;
+        }
+        .menu {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu-item {
+            padding: 15px;
+            border-bottom: 1px solid #444;
+        }
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .menu-item a i {
+            margin-right: 10px;
+        }
+        .submenu {
+            list-style-type: none;
+            padding-left: 20px;
+            display: none;
+        }
+        .submenu-item {
+            padding: 10px 0;
+        }
+        .submenu-item a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        h1, h2, h3, p {
+            margin: 0 0 20px 0;
+        }
 
-.sidebar {
-    width: 250px;
-    background-color: #4a63ac;
-    color: #ecf0f1;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-}
+        @media screen and (max-width: 700px)
+        {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+            }
+            .menu-item a i {
+                margin-right: 5px;
+            }
+        }
 
-.sidebar-header {
-    padding: 20px;
-    background-color: #34495e;
-    text-align: center;
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1;
-}
-
-.menu-item {
-    padding: 15px 20px;
-}
-
-.menu-item a {
-    text-decoration: none;
-    color: #ecf0f1;
-    display: flex;
-    align-items: center;
-}
-
-.menu-item a i {
-    margin-right: 10px;
-}
-
-.menu-item a:hover {
-    background-color: #1abc9c;
-}
-
-.submenu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-.submenu-item {
-    padding: 10px 40px;
-}
-
-.submenu-item a {
-    color: #ecf0f1;
-    display: flex;
-    align-items: center;
-}
-
-.submenu-item a i {
-    margin-right: 10px;
-}
-
-.submenu-item a:hover {
-    background-color: #16a085;
-}
-
-.menu-item:hover .submenu {
-    display: block;
-}
-
-.content {
-    margin-left: 250px;
-    padding: 20px;
-    flex-grow: 1;
-}
-
-/* Responsive design */
-@media (max-width: 800px) {
-    .sidebar {
-        width: 200px;
-    }
-
-    .content {
-        margin-left: 200px;
-    }
-}
-
-@media (max-width: 800px) {
-    .sidebar {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        margin-top: 500px;
-    }
-
-    .content {
-        margin-left: 0;
-        padding-top: 100px;
-    }
-
-    .sidebar-header {
-        display: none;
-    }
-
-    .menu-item {
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .submenu-item {
-        text-align: left;
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 400px) {
-    .menu-item a {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-item a i {
-        margin: 0 0 5px 0;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    body{
-      background-color: gray;
-      
-    }
-  }
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .menu-item {
+                padding: 10px;
+            }
+            .submenu-item {
+                padding: 5px 0;
+            }
+            h1, h2, h3 {
+                font-size: 1.2em;
+            }
+        }
+     
